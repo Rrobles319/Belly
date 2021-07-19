@@ -113,5 +113,63 @@ function buildCharts(sample) {
     };
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", data, barLayout);
+    // var trace1 = {
+    //   x: [1, 2, 3, 4],
+    //   y: [10, 11, 12, 13],
+    //   text: ['A<br>size: 40', 'B<br>size: 60', 'C<br>size: 80', 'D<br>size: 100'],
+    //   mode: 'markers',
+    // 1. Create the trace for the bubble chart.
+    var bubbleData = [ {
+      x: otuIds,
+      y: sampleValues,
+      text: otuLabels,
+      mode: 'markers',
+      marker: {
+        color: otuIds,
+        size: sampleValues
+      }
+    }];
+    // title: 'Bubble Chart Hover Text',
+    // showlegend: false,
+    // height: 600,
+    // width: 600
+    // 2. Create the layout for the bubble chart
+    var bubbleLayout = {
+      title: 'Bubble Chart Hover Text',
+      showlegend: false,
+      //hovermode: closest,
+      height: 600,
+      width: 600
+      
+    };
+
+    // 3. Use Plotly to plot the data with the layout.
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
   });
 }
+
+// Bar and Bubble charts
+// Create the buildCharts function.
+// function buildCharts(sample) {
+//   // Use d3.json to load and retrieve the samples.json file 
+//   d3.json("samples.json").then((data) => {
+    
+
+//     // Deliverable 1 Step 10. Use Plotly to plot the data with the layout. 
+//     Plotly.newPlot(); 
+
+//     // 1. Create the trace for the bubble chart.
+//     var bubbleData = [
+   
+//     ];
+
+//     // 2. Create the layout for the bubble chart.
+//     var bubbleLayout = {
+      
+//     };
+
+//     // 3. Use Plotly to plot the data with the layout.
+//     Plotly.newPlot(); 
+//   });
+// }
+
