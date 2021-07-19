@@ -135,11 +135,12 @@ function buildCharts(sample) {
     // width: 600
     // 2. Create the layout for the bubble chart
     var bubbleLayout = {
-      title: 'Bubble Chart Hover Text',
+      title: 'Bacteria Cultures Per Sample',
+      xaxis: {title: "OTU ID"},
       showlegend: false,
       //hovermode: closest,
-      height: 600,
-      width: 600
+      height: 500,
+      width: 800
       
     };
 
